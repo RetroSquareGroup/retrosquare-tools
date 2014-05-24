@@ -37,6 +37,6 @@ autocmd FileType html :setlocal sw=2 ts=2 sts=2" > ~/.vimrc
 echo "Installing plugins..."
 git clone git://github.com/tpope/vim-fugitive.git ~/.vim/bundle/vim-fugitive
 git clone git://github.com/airblade/vim-gitgutter.git ~/.vim/bundle/vim-gitgutter
-git clone https://github.com/kien/ctrlp.vim.git ~/.vim/bundle/ctrlp.vim
-git clone https://github.com/bling/vim-airline ~/.vim/bundle/vim-airline
+git clone git://github.com/kien/ctrlp.vim.git ~/.vim/bundle/ctrlp.vim
+git clone git://github.com/bling/vim-airline ~/.vim/bundle/vim-airline
 git clone git://github.com/vitalk/vim-lesscss.git ~/.vim/bundle/vim-lesscss
