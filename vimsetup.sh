@@ -25,6 +25,8 @@ set autoread
 
 let g:lesscss_save_to = '../css/'
 
+let g:ctrlp_follow_symlinks = 1
+
 colorscheme twilight256
 
 filetype plugin indent on
