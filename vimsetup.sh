@@ -22,6 +22,13 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set autoread
+set nowrap
+set paste
+
+nmap <silent> \`<Up> :wincmd k<CR>
+nmap <silent> \`<Down> :wincmd j<CR>
+nmap <silent> \`<Left> :wincmd h<CR>
+nmap <silent> \`<Right> :wincmd l<CR>
 
 let g:lesscss_save_to = '../css/'
 
