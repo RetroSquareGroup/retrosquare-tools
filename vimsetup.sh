@@ -9,6 +9,9 @@ curl -LSso ~/.vim/autoload/pathogen.vim https://raw.github.com/tpope/vim-pathoge
 echo "Downloading and installing Twilight theme..."
 curl -LSso ~/.vim/colors/twilight256.vim http://www.vim.org/scripts/download_script.php?src_id=14937
 
+echo "Downloading and installing Molokai theme..."
+curl -LSso ~/.vim/colors/molokai.vim https://raw.githubusercontent.com/tomasr/molokai/master/colors/molokai.vim
+
 echo "Downloading and installing syntaxes..."
 curl -LSso ~/.vim/syntax/less.vim http://leafo.net/lessphp/vim/less.vim
 
@@ -32,10 +35,10 @@ nmap <silent> \`<Right> :wincmd l<CR>
 inoremap <Nul> <C-p>
 
 let g:lesscss_save_to = '../css/'
-
 let g:ctrlp_follow_symlinks = 1
+let g:rehash256 = 1
 
-colorscheme twilight256
+colorscheme molokai
 
 filetype plugin indent on
 
