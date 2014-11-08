@@ -6,8 +6,8 @@ cd ~/.vim
 echo "Downloading and installing pathogen..."
 curl -LSso ~/.vim/autoload/pathogen.vim https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
 
-echo "Downloading and installing Twilight theme..."
-curl -LSso ~/.vim/colors/twilight256.vim http://www.vim.org/scripts/download_script.php?src_id=14937
+#echo "Downloading and installing Twilight theme..."
+#curl -LSso ~/.vim/colors/twilight256.vim http://www.vim.org/scripts/download_script.php?src_id=14937
 
 echo "Downloading and installing Molokai theme..."
 curl -LSso ~/.vim/colors/molokai.vim https://raw.githubusercontent.com/tomasr/molokai/master/colors/molokai.vim
@@ -37,6 +37,8 @@ inoremap <Nul> <C-p>
 let g:lesscss_save_to = '../css/'
 let g:ctrlp_follow_symlinks = 1
 let g:rehash256 = 1
+let g:jsx_ext_required = 0
+let g:jsx_pragma_required = 1
 
 colorscheme molokai
 
@@ -45,6 +47,8 @@ filetype plugin indent on
 au BufNewFile,BufRead *.less set filetype=less
 
 autocmd BufWritePre * :%s/\s\+$//e
+autocmd FileType js :setlocal sw=2 ts=2 sts=2
+autocmd FileType scss :setlocal sw=2 ts=2 sts=2
 autocmd FileType html :setlocal sw=2 ts=2 sts=2" > ~/.vimrc
 
 echo "Installing plugins..."
@@ -54,3 +58,5 @@ git clone git://github.com/kien/ctrlp.vim.git ~/.vim/bundle/ctrlp.vim
 git clone git://github.com/bling/vim-airline ~/.vim/bundle/vim-airline
 git clone git://github.com/vitalk/vim-lesscss.git ~/.vim/bundle/vim-lesscss
 git clone git://github.com/nathanaelkane/vim-indent-guides.git ~/.vim/bundle/vim-indent-guides
+git clone git://github.com/mxw/vim-jsx.git ~/.vim/bundle/vim-jsx
+git clone git://github.com/pangloss/vim-javascript.git ~/.vim/bundle/vim-javascript
