@@ -39,6 +39,7 @@ let g:ctrlp_follow_symlinks = 1
 let g:rehash256 = 1
 let g:jsx_ext_required = 0
 let g:jsx_pragma_required = 1
+let g:netrw_liststyle=3
 
 colorscheme molokai
 
