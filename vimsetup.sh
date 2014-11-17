@@ -21,8 +21,8 @@ syntax on
 
 set number
 set smartindent
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set expandtab
 set autoread
 set nowrap
@@ -34,7 +34,6 @@ nmap <silent> \`<Left> :wincmd h<CR>
 nmap <silent> \`<Right> :wincmd l<CR>
 inoremap <Nul> <C-p>
 
-let g:lesscss_save_to = '../css/'
 let g:ctrlp_follow_symlinks = 1
 let g:rehash256 = 1
 let g:jsx_ext_required = 0
@@ -50,6 +49,7 @@ au BufNewFile,BufRead *.less set filetype=less
 autocmd BufWritePre * :%s/\s\+$//e
 autocmd FileType js :setlocal sw=2 ts=2 sts=2
 autocmd FileType scss :setlocal sw=2 ts=2 sts=2
+autocmd FileType less :setlocal sw=2 ts=2 sts=2
 autocmd FileType html :setlocal sw=2 ts=2 sts=2" > ~/.vimrc
 
 echo "Installing plugins..."
@@ -61,3 +61,12 @@ git clone git://github.com/vitalk/vim-lesscss.git ~/.vim/bundle/vim-lesscss
 git clone git://github.com/nathanaelkane/vim-indent-guides.git ~/.vim/bundle/vim-indent-guides
 git clone git://github.com/mxw/vim-jsx.git ~/.vim/bundle/vim-jsx
 git clone git://github.com/pangloss/vim-javascript.git ~/.vim/bundle/vim-javascript
+
+(cd ~/.vim/bundle/vim-fugitive      && git pull --rebase)
+(cd ~/.vim/bundle/vim-gitgutter     && git pull --rebase)
+(cd ~/.vim/bundle/ctrlp.vim         && git pull --rebase)
+(cd ~/.vim/bundle/vim-airline       && git pull --rebase)
+(cd ~/.vim/bundle/vim-lesscss       && git pull --rebase)
+(cd ~/.vim/bundle/vim-indent-guides && git pull --rebase)
+(cd ~/.vim/bundle/vim-jsx           && git pull --rebase)
+(cd ~/.vim/bundle/vim-javascript    && git pull --rebase)
