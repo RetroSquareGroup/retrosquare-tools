@@ -40,6 +40,11 @@ let g:jsx_ext_required = 0
 let g:jsx_pragma_required = 1
 let g:netrw_liststyle=3
 
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
 colorscheme molokai
 
 filetype plugin indent on
@@ -47,7 +52,7 @@ filetype plugin indent on
 au BufNewFile,BufRead *.less set filetype=less
 
 autocmd BufWritePre * :%s/\s\+$//e
-autocmd FileType js :setlocal sw=2 ts=2 sts=2
+autocmd FileType js :setlocal sw=2 ts=4 sts=2
 autocmd FileType scss :setlocal sw=2 ts=2 sts=2
 autocmd FileType less :setlocal sw=2 ts=2 sts=2
 autocmd FileType html :setlocal sw=2 ts=2 sts=2" > ~/.vimrc
@@ -61,6 +66,7 @@ git clone git://github.com/vitalk/vim-lesscss.git ~/.vim/bundle/vim-lesscss
 git clone git://github.com/nathanaelkane/vim-indent-guides.git ~/.vim/bundle/vim-indent-guides
 git clone git://github.com/mxw/vim-jsx.git ~/.vim/bundle/vim-jsx
 git clone git://github.com/pangloss/vim-javascript.git ~/.vim/bundle/vim-javascript
+git clone git://github.com/scrooloose/syntastic.git ~/.vim/bundle/syntastic
 
 (cd ~/.vim/bundle/vim-fugitive      && git pull --rebase)
 (cd ~/.vim/bundle/vim-gitgutter     && git pull --rebase)
@@ -70,3 +76,4 @@ git clone git://github.com/pangloss/vim-javascript.git ~/.vim/bundle/vim-javascr
 (cd ~/.vim/bundle/vim-indent-guides && git pull --rebase)
 (cd ~/.vim/bundle/vim-jsx           && git pull --rebase)
 (cd ~/.vim/bundle/vim-javascript    && git pull --rebase)
+(cd ~/.vim/bundle/syntastic         && git pull --rebase)
