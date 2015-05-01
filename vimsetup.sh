@@ -149,7 +149,7 @@ colorscheme molokai
 
 filetype plugin indent on
 
-au BufNewFile,BufRead *.less set filetype=less
+au BufNewFile,BufRead *.less set filetype=less.css
 au BufNewFile,BufRead *.js set filetype=html.js
 
 autocmd BufWritePre * :%s/\s\+$//e
