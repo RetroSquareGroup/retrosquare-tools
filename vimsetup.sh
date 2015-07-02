@@ -144,7 +144,7 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-let g:syntastic_javascript_checkers = ['jsxhint']
+let g:syntastic_javascript_checkers = ['eshint']
 
 colorscheme molokai
 
@@ -159,8 +159,9 @@ autocmd FileType less :setlocal sw=2 ts=2 sts=2
 autocmd FileType html :setlocal sw=2 ts=2 sts=2" > ~/.vimrc
 
 echo "Installing jshint..."
-npm install -g jshint
-npm install -g jsxhint
+npm install -g eslint
+npm install -g babel-eslint
+npm install -g eslint-plugin-react
 
 echo "Installing plugins..."
 git clone git://github.com/tpope/vim-fugitive.git ~/.vim/bundle/vim-fugitive
